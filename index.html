@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta
@@ -65,7 +65,8 @@
         inset: 0;
         z-index: 0;
         pointer-events: none;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             ellipse 80% 50% at 20% 20%,
             rgba(154, 107, 255, 0.12) 0%,
             transparent 60%
@@ -240,7 +241,9 @@
         border-radius: 50px;
         border: none;
         cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
         box-shadow: 0 4px 30px rgba(201, 168, 76, 0.25);
       }
       .btn-primary:hover {
@@ -259,7 +262,9 @@
         text-transform: uppercase;
         text-decoration: none;
         border-radius: 50px;
-        transition: background 0.3s, color 0.3s;
+        transition:
+          background 0.3s,
+          color 0.3s;
         cursor: pointer;
         background: transparent;
       }
@@ -404,7 +409,10 @@
         border: 1px solid rgba(255, 255, 255, 0.06);
         border-radius: var(--radius);
         overflow: hidden;
-        transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
+        transition:
+          transform 0.35s,
+          border-color 0.35s,
+          box-shadow 0.35s;
         cursor: pointer;
         position: relative;
       }
@@ -635,7 +643,9 @@
       .faq-a {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease, padding 0.3s;
+        transition:
+          max-height 0.4s ease,
+          padding 0.3s;
         color: var(--text-muted);
         font-size: 0.9rem;
         line-height: 1.7;
@@ -778,7 +788,9 @@
       .reveal {
         opacity: 0;
         transform: translateY(40px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
       }
       .reveal.visible {
         opacity: 1;
@@ -1029,6 +1041,25 @@
       </div>
     </div>
 
+    <!-- ═══════════════ PARFUMS DUBAI ═══════════════ -->
+    <section class="section" id="dubai">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-label">// Parfum Dubai</div>
+          <h2 class="section-title">
+            Parfums <span class="accent">Dubai</span>
+          </h2>
+          <p class="section-desc">
+            Découvrez la magie olfactive de Dubaï : puissance du Oud, muscs
+            blancs raffinés, bois précieux et notes orientales intenses.
+            Sélection des meilleurs parfums qui incarnent l’exubérance et le
+            luxe de la cité dorée.
+          </p>
+        </div>
+        <div class="cards-grid" id="dubaiGrid"></div>
+      </div>
+    </section>
+
     <!-- ═══════════════ MAINSTREAM ═══════════════ -->
     <section class="section" id="mainstream">
       <div class="section-inner">
@@ -1093,7 +1124,7 @@
           <div style="flex: 1; min-width: 220px">
             <div
               style="
-                font-family: 'Orbitron', sans-serif;
+                font-family: &quot;Orbitron&quot;, sans-serif;
                 font-size: 1.1rem;
                 letter-spacing: 4px;
                 background: linear-gradient(
@@ -1232,24 +1263,68 @@
     <script>
       // ──── DATA ────
       const DATA = {
-        classiques: [
+        dubai: [
           {
-            name: "Chanel N°5",
-            house: "Chanel",
-            desc: "Le parfum le plus iconique de l'histoire, une composition florale-aldéhyde intemporelle créée en 1921.",
-            price: "€120–160",
-            icon: "🌸",
-            theme: "theme-rose",
-            tag: "Iconique",
+            name: "Yara",
+            house: "Lattafa",
+            desc: "Oud doré intense et gourmand, avec des notes de praline et de bois ambrés. Ultra populaire à Dubai!",
+            price: "€15-30",
+            icon: "🩷",
+            theme: "theme-pink",
+            tag: "Best Dubai",
+            url: "https://amzn.to/49YsHHU",
           },
           {
-            name: "Sauvage",
-            house: "Dior",
-            desc: "Une composition fraîche et intense qui a révolutionné le marché masculin avec ses notes d'ambre et de santal.",
+            name: "Khamrah",
+            house: "Lattafa",
+            desc: "un accord gourmand et ambré mêlant cannelle et dattes, adouci par la vanille et la fève tonka, avec une chaleur sucrée et une tenue puissante.",
+            price: "€20–40",
+            icon: "🏆",
+            theme: "theme-cyan",
+            tag: "Signature",
+            url: "https://amzn.to/3Mf77px",
+          },
+          {
+            name: "Liquide Brun",
+            house: "French Avenue",
+            desc: "un accord ambré-gourmand intense, dominé par la vanille sombre et les épices chaudes, avec une profondeur sucrée et une tenue longue durée.",
+            price: "€30–55",
+            icon: "🌙",
+            theme: "theme-gold",
+            tag: "Qualité",
+            url: "https://amzn.to/3MflkTo",
+          },
+          {
+            name: "Assad",
+            house: "Lattafa",
+            desc: "un accord oriental puissant mêlant poivre noir et épices chaudes, enveloppé de vanille et d’ambre, avec un sillage intense et une excellente tenue.",
+            price: "€15-30",
+            icon: "🖤",
+            theme: "theme-gold",
+            tag: "Efficacité",
+            url: "https://amzn.to/4r2HebK",
+          },
+        ],
+        classiques: [
+          {
+            name: "Le male",
+            house: "Jean Paul Gaultier",
+            desc: "un accord aromatique-fougère iconique, mêlant menthe fraîche et lavande, adouci par une vanille chaleureuse au sillage durable.",
+            price: "€90–120",
+            icon: "🥂",
+            theme: "theme-rose",
+            tag: "Iconique",
+            url: "https://amzn.to/4rueokc",
+          },
+          {
+            name: "Million Gold",
+            house: "Paco Rabanne",
+            desc: "un accord ambré-boisé riche, porté par la vanille et le bois de santal, avec une chaleur dorée et un sillage profond longue durée. ",
             price: "€80–120",
-            icon: "🏔️",
+            icon: "🎫",
             theme: "theme-cyan",
             tag: "Bestseller",
+            url: "https://amzn.to/4aaoY8Y",
           },
           {
             name: "Opium",
@@ -1259,17 +1334,19 @@
             icon: "🪷",
             theme: "theme-violet",
             tag: "Légendaire",
+            url: "https://amzn.to/4koTGA8",
           },
         ],
         intemporels: [
           {
-            name: "Davidoff Cool Water",
-            house: "Davidoff",
-            desc: "Une fragrance aquatique-herbacée qui reste une valeur absolue depuis des décennies. Fraîcheur inégalée.",
+            name: "Eros",
+            house: "Versace",
+            desc: "un accord frais-aromatique vibrant, dominé par la menthe et le citron, soutenu par la pomme et réchauffé par une vanille sensuelle au sillage puissant.",
             price: "€40–70",
             icon: "💧",
             theme: "theme-cyan",
             tag: "Evergreen",
+            url: "https://amzn.to/4ceOlch",
           },
           {
             name: "Le Margiela Replica",
@@ -1279,6 +1356,7 @@
             icon: "🫧",
             theme: "theme-violet",
             tag: "Conceptuel",
+            url: "https://amzn.to/4qmjoXh",
           },
           {
             name: "Terre d'Hermès",
@@ -1288,26 +1366,29 @@
             icon: "🌳",
             theme: "theme-gold",
             tag: "Élégance",
+            url: "https://amzn.to/46vq91D",
           },
         ],
         budget: [
           {
-            name: "Versence Oud",
-            house: "Various",
-            desc: "Une gamme de parfums orientaux à prix mini. La qualité surprend vraiment pour ces tarifs.",
-            price: "€15–30",
-            icon: "💎",
+            name: "only the brave",
+            house: "Diesel",
+            desc: "un accord boisé-oriental affirmé, mêlant citron et coriandre, réchauffé par l’ambre et le cuir, avec un sillage masculin et persistant.",
+            price: "€30–55",
+            icon: "👊",
             theme: "theme-gold",
             tag: "Pépite",
+            url: "https://amzn.to/4bKmfFT",
           },
           {
-            name: "Bvlgari Aqua",
-            house: "Bvlgari",
-            desc: "Frais et lumineux, ce parfum aquatique est accessible et dure raisonablement bien pour le prix.",
+            name: "Azzaro pour homme",
+            house: "Azzaro",
+            desc: "un accord aromatique-fougère intemporel, mêlant anis et lavande, structuré par le basilic et le vétiver, avec une élégance masculine et une tenue durable.",
             price: "€35–55",
-            icon: "🌊",
+            icon: "🏅",
             theme: "theme-cyan",
             tag: "Rapport ★★★",
+            url: "https://amzn.to/3ZRurwy",
           },
           {
             name: "Azzaro Wanted",
@@ -1317,64 +1398,71 @@
             icon: "🔥",
             theme: "theme-rose",
             tag: "Avis Excellent",
+            url: "https://amzn.to/4r7FopV",
           },
         ],
         niches: [
           {
-            name: "Replica: By the Fireside",
-            house: "Maison Margiela",
-            desc: "Un parfum fumé et chaleureux qui crée une atmosphère cocooning avec ses notes de cheminée.",
-            price: "€120–160",
-            icon: "🕯️",
+            name: "Creed",
+            house: "Aventus",
+            desc: "un accord fruité-boisé emblématique, porté par l’ananas et la bergamote, structuré par le bouleau fumé et le patchouli, avec un sillage puissant et une grande longévité.",
+            price: "€150–210",
+            icon: "🐎",
             theme: "theme-violet",
             tag: "Cult",
+            url: "https://amzn.to/45T7igV",
           },
           {
-            name: "Oud Smoke",
-            house: "Taif Al Oud",
-            desc: "Un oud intense et fumé, créé par une maison saoudienne avec une authenticité incomparable.",
-            price: "€80–150",
+            name: "perseus",
+            house: "Parfums De Marly",
+            desc: "un accord hespéridé-boisé lumineux, dominé par les agrumes éclatants et le vétiver sec, soutenu par un fond ambré élégant et persistant.",
+            price: "€200-250",
             icon: "🌙",
             theme: "theme-gold",
             tag: "Rare",
+            url: "https://amzn.to/4r120s2",
           },
           {
-            name: "Rose Sospeso",
-            house: "Aquolina",
-            desc: "Une rose moderne et crémeuse qui offre une interprétation fresh et unique de la reine des fleurs.",
-            price: "€50–80",
+            name: "Ani",
+            house: "Nishane",
+            desc: "un accord oriental-vanillé sophistiqué, où le gingembre et les épices fraîches ouvrent sur une vanille crémeuse et ambrée, profonde et longue tenue.",
+            price: "€130-165",
             icon: "🌹",
             theme: "theme-rose",
             tag: "Unique",
+            url: "https://amzn.to/4a32qbz",
           },
         ],
         mainstream: [
           {
-            name: "Bleu de Chanel",
-            house: "Chanel",
-            desc: "Le parfum masculin le plus vendu au monde. Un accord bois-frais-épicé impeccablement dosé.",
-            price: "€80–120",
-            icon: "💨",
+            name: "Eros Flame",
+            house: "Versace",
+            desc: "un accord épicé-boisé ardent, mêlant agrumes vibrants et poivre noir, embrasé par une vanille chaleureuse et un fond boisé intense au sillage puissant.",
+            price: "€70–90",
+            icon: "🔥",
             theme: "theme-cyan",
-            tag: "N°1 Mondial",
+            tag: "Kiff",
+            url: "https://amzn.to/45T0kbI",
           },
           {
-            name: "Good Girl",
-            house: "Carolina Herrera",
-            desc: "Un parfum féminin gourmand avec des notes de vanille et de cacao, très séducteur.",
-            price: "€70–100",
+            name: "Uomo born in roma",
+            house: "Valentino",
+            desc: "un accord boisé-aromatique élégant, mêlant sauge et gingembre minéral, soutenu par un vétiver fumé et une sensualité moderne durable.",
+            price: "€70–150",
             icon: "👠",
             theme: "theme-rose",
             tag: "Populaire",
+            url: "https://amzn.to/4tAHaBI",
           },
           {
-            name: "Versace Dylan Blue",
-            house: "Versace",
-            desc: "Un accord fougère moderne avec des notes de citron, de cedre et de cuir. Très polyvalent.",
-            price: "€60–90",
+            name: "Stronger with You",
+            house: "Giorgo Armani",
+            desc: ": un accord ambré-gourmand moderne, mêlant châtaigne et épices chaudes, adouci par la vanille et le sucre brûlé, avec un sillage enveloppant et durable.",
+            price: "€80-170",
             icon: "⚡",
             theme: "theme-violet",
             tag: "Top Ventes",
+            url: "https://amzn.to/4kl0U85",
           },
         ],
         inspirations: [
@@ -1542,8 +1630,8 @@
           .map(
             (item) => `
     <article class="card ${item.theme} reveal" aria-label="Parfum: ${
-              item.name
-            }">
+      item.name
+    }">
       <div class="card-visual">
         <div class="glow" style="background:currentColor;"></div>
         <span class="card-icon">${item.icon}</span>
@@ -1555,14 +1643,14 @@
         <div class="card-meta">
           <span class="card-price">${item.price}</span>
           <a href="${item.url || "#"}" class="card-link" target="${
-              item.url ? "_blank" : "_self"
-            }" rel="${
-              item.url ? "noopener noreferrer nofollow" : ""
-            }" aria-label="Voir l'offre pour ${item.name}">Voir Offre →</a>
+            item.url ? "_blank" : "_self"
+          }" rel="${
+            item.url ? "noopener noreferrer nofollow" : ""
+          }" aria-label="Voir l'offre pour ${item.name}">Voir Offre →</a>
         </div>
       </div>
     </article>
-  `
+  `,
           )
           .join("");
       }
@@ -1580,7 +1668,7 @@
       </div>
       <div class="faq-a">${item.a}</div>
     </div>
-  `
+  `,
         ).join("");
       }
 
@@ -1651,6 +1739,7 @@
         renderCards("intemporelsGrid", DATA.intemporels);
         renderCards("budgetGrid", DATA.budget);
         renderCards("nichesGrid", DATA.niches);
+        renderCards("dubaiGrid", DATA.dubai);
         renderCards("mainstreamGrid", DATA.mainstream);
         renderCards("inspirationsGrid", DATA.inspirations);
         renderFAQ();
@@ -1665,7 +1754,7 @@
           handleNavScroll();
           updateProgress();
         },
-        { passive: true }
+        { passive: true },
       );
     </script>
   </body>
